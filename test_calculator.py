@@ -32,12 +32,12 @@ class TestCalculator(unittest.TestCase):
         # with self.assertRaises(<INSERT_ERROR_TYPE>):
         #     div(0, 5)
         with self.assertRaises(ZeroDivisionError):
-            div(5, 0)
+            div(0,5 )
 
     def test_logarithm(self): # 3 assertions
         self.assertAlmostEqual(logarithm(10, 1), 0.0)
         self.assertAlmostEqual(logarithm(2,8), 3.0)
-        self.assertAlmostEqual(logarithm(0.25, 2), -2.0)
+        self.assertAlmostEqual(logarithm(7, 7), 1)
 
     def test_log_invalid_base(self): # 1 assertion
         # use same technique from test_divide_by_zero
