@@ -11,7 +11,7 @@ import math
 def add(a, b):
     return a + b
 
-def sub(a, b):
+def subtract(a, b):
     return a - b
 
 def mul(a, b):
@@ -22,32 +22,28 @@ def div(a, b):
         raise ZeroDivisionError()
     return b / a # raise ZeroDivisionError if a == 0
 
-def log(a, b):
-    if b <= 0:
-        raise ValueError()
-    if a <= 1:
-        raise ValueError()
-    return math.log(b, a)# use math library + raise ValueError
-
-def exp(a, b):
-    return a ** b
-
-import math
-
-def add(a, b): 
-    return a + b
-
-def subtract(a, b):
-    return a - b
-
-def multiply(a, b):
-    return a * b
-
 def logarithm(a, b):
     if a <= 1 or b <= 0:
         raise ValueError
 
     return math.log(b, a)
 
-def exponent(a, b):
+def exp(a, b):
     return a ** b
+
+def square_root(a):
+    try:
+        if a < 0:
+            raise ValueError
+
+        return math.sqrt(a)
+
+    except Exception as e:
+        raise ValueError
+
+def hypotenuse(a, b):
+    try:
+        return math.hypot(a, b)
+
+    except Exception as e:
+        raise ValueError
